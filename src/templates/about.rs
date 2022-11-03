@@ -4,7 +4,7 @@ use sycamore::prelude::{view, Html, SsrNode, View};
 #[perseus::template_rx]
 pub fn about_page() -> View<G> {
     view! {
-        p { "About this app." }
+        p(class="my-class", id="my-paragraph", aria-label="About Paragraph") { "About this app." }
         a(href = "index", id = "home-link") { "Home!" }
     }
 }
