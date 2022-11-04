@@ -9,8 +9,12 @@ pub struct IndexPageState {
 #[perseus::template_rx]
 pub fn index_page(state: IndexPageStateRx) -> View<G> {
     view! {
-        p { (state.greeting.get()) }
-        a(href = "about", id = "about-link") { "About!" }
+        div(class="font-normal mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8") {
+            (state.greeting.get())
+        }
+        div(class="font-normal mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8") {
+            a(href = "about", type="button", id = "about-link", class="pointer-events-auto mt-8 rounded-md bg-primary-400 py-2 px-3 hover:text-gray hover:bg-secondary-700" ) { "About!" }
+        }               
     }
 }
 
