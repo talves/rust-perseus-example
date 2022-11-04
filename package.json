@@ -1,0 +1,27 @@
+{
+  "name": "first-perseus-app",
+  "version": "1.0.0",
+  "description": "Perseus app using tailwind",
+  "main": "index.js",
+  "author": "talves <tony@3alves.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "install_crates": "yarn install_wasm_pack && yarn install_perseus",
+    "install_wasm_pack": "chmod 744 ./bin/install_wasm_pack.sh && WASM_PACK_VERSION=0.10.3 ./bin/install_wasm_pack.sh",
+    "install_perseus": "chmod 744 ./bin/install_perseus.sh && PERSEUS_VERSION=0.3.6 ./bin/install_perseus.sh",
+    "export": "yarn tw:build && perseus export --release",
+    "build": "yarn tw:build && yarn build:app",
+    "build:app": "perseus build --release",
+    "tw:build": "NODE_ENV=production tailwindcss -i ./styles.css -c ./tailwind.config.js -o ./static/tailwind.css --minify",
+    "tw:dev": "tailwindcss -i ./styles.css -c ./tailwind.config.js -o ./static/tailwind.css",
+    "start": "concurrently \"yarn tw:dev --watch\" \"perseus serve -w\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.5.0",
+    "postcss": "^8.4.18",
+    "postcss-import": "^15.0.0",
+    "tailwindcss": "^3.2.1"
+  }
+}

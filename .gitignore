@@ -1,3 +1,4 @@
 /target
-
 .perseus/
+/static/tailwind.css
+node_modules/
