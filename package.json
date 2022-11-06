@@ -12,6 +12,7 @@
     "install_perseus": "chmod 744 ./bin/install_perseus.sh && PERSEUS_VERSION=0.3.6 ./bin/install_perseus.sh",
     "export:post": "mv ./.perseus/dist/exported/.perseus ./.perseus/dist/exported/perseus",
     "export": "yarn tw:build && perseus export --release",
+    "export:netlify": "yarn export && yarn export:post",
     "build": "yarn tw:build && yarn build:app",
     "build:app": "perseus build --release",
     "tw:build": "NODE_ENV=production tailwindcss -i ./styles.css -c ./tailwind.config.js -o ./static/tailwind.css --minify",

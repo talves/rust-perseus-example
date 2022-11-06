@@ -2,3 +2,5 @@
 .perseus/
 /static/tailwind.css
 node_modules/
+# Local Netlify folder
+.netlify
