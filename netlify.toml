@@ -1,6 +1,6 @@
 [build]
     publish = ".perseus/dist/exported"
-    command = "yarn install_crates && export:netlify"
+    command = "yarn install_crates && yarn export:netlify"
 
 [[redirects]]
   from = "/.perseus/*"
