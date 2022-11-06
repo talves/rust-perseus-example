@@ -3,7 +3,7 @@
     command = "yarn install_crates && yarn export && yarn export:post"
 
 [[redirects]]
-  from = "/.well-known/*"
+  from = "/perseus/*"
   to = "/.perseus/:splat"
   status = 200
   force = true

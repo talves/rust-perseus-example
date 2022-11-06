@@ -10,7 +10,7 @@
     "install_crates": "yarn install_wasm_pack && yarn install_perseus",
     "install_wasm_pack": "chmod 744 ./bin/install_wasm_pack.sh && WASM_PACK_VERSION=0.10.3 ./bin/install_wasm_pack.sh",
     "install_perseus": "chmod 744 ./bin/install_perseus.sh && PERSEUS_VERSION=0.3.6 ./bin/install_perseus.sh",
-    "export:post": "mv ./.perseus/dist/exported/.perseus ./.perseus/dist/exported/.well-known",
+    "export:post": "mv ./.perseus/dist/exported/.perseus ./.perseus/dist/exported/perseus",
     "export": "yarn tw:build && perseus export --release",
     "build": "yarn tw:build && yarn build:app",
     "build:app": "perseus build --release",
