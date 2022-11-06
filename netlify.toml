@@ -1,3 +1,9 @@
 [build]
     publish = ".perseus/dist/exported"
     command = "yarn install_crates && yarn export"
+
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.perseus/:splat"
+  status = 200
+  force = true
